@@ -1,0 +1,95 @@
+/* Reset default body styles */
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background: radial-gradient(circle, #161717, #000000);
+    color: white;
+    font-family: Arial, sans-serif;
+    position: relative;
+    cursor: none; /* Hide the default cursor globally */
+}
+
+/* Additional styles for the ball */
+.ball {
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    pointer-events: none; /* Ensure the ball doesn't interferes with mouse events */
+    z-index: 9999; /* Ensure the ball is on top of other elements */
+    top: -10px; /* Adjust to center the ball relative to the cursor */
+    left: -10px; /* Adjust to center the ball relative to the cursor */
+}
+
+/* Styles for the other elements */
+h1 {
+    position: absolute;
+    top: 350px;
+    left: 300px;
+    margin: 0;
+}
+
+h2 {
+    position: absolute;
+    top: 390px;
+    left: 300px;
+    margin: 0;
+    font-size: 14px;
+    color: gray;
+    font-weight: bold;
+}
+
+h3 {
+    position: bottom;
+    margin: 0;
+    font-size: 14px;
+    color: rgba(128, 128, 128, 0.062);
+    font-weight: bold;
+}
+
+button.cta-button {
+    position: absolute;
+    top: 430px;
+    left: 300px;
+    padding: 10px 20px;
+    background-color: #775fff;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 25px;
+    outline: none;
+    box-shadow: 0 0 10px rgba(151, 39, 255, 0.726);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    z-index: 1; /* Ensure buttons are below the ball */
+}
+
+button.cta-button:hover {
+    box-shadow: 0 0 20px rgba(151, 59, 255, 0.8);
+    background-color: #8d79ff;
+    transform: scale(1.1);
+    cursor: none;
+}
+
+img.floating-image {
+    position: absolute;
+    top: 200px;
+    left: 1000px;
+    height: 540px;
+    width: 836px;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
